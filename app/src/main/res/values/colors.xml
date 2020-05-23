@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- Delivery -->
+    <color name="delivery">#31A129</color>
+
+    <!-- Provider -->
+    <color name="provider">#2939AA</color>
+
+    <!-- Price -->
+    <color name="price">#B12121</color>
+
+    <!-- Pop Start -->
+    <color name="pop_start">#CDB5B5</color>
+
+    <!-- Pop End -->
+    <color name="pop_end">#2E2C2C</color>
+</resources>

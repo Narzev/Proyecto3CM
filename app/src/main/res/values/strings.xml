@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Proyecto3CM</string>
+    <string name="url_base">https://www.serverbpw.com/cm/2020-2/products.php</string>
+    <string name="price_delivery">Gratis</string>
+    <string name="url_details">https://www.serverbpw.com/cm/2020-2/product_detail.php?id=</string>
+</resources>
