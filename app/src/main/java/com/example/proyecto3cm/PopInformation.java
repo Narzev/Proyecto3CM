@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -46,7 +47,7 @@ public class PopInformation extends AppCompatActivity implements Response.ErrorL
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width * 0.8), (int)(height * 0.7));
+        getWindow().setLayout((int)(width * 0.8), (int)(height * 0.8));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -64,6 +65,32 @@ public class PopInformation extends AppCompatActivity implements Response.ErrorL
         Log.d("Url del elemento: ", url);
         request = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
         queue.add(request);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Animatoo.animateFade(PopInformation.this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        Animatoo.animateFade(PopInformation.this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        Animatoo.animateFade(PopInformation.this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
     @Override

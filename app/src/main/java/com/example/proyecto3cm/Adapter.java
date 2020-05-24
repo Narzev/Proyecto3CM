@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -57,6 +59,9 @@ public class Adapter extends BaseAdapter {
         else {
             tvEnvio.setText(products.get(position).getDelivery());
         }
+
+        Animation animation = AnimationUtils.loadAnimation(contexto, R.anim.slide_left);
+        vista.startAnimation(animation);
 
         return vista;
     }

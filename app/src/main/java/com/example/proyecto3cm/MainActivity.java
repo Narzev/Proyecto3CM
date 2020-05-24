@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.proyecto3cm.Model.Producto;
 
 import org.json.JSONArray;
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity implements Response.ErrorLis
         url = getResources().getString(R.string.url_base);
         request = new JsonArrayRequest(Request.Method.GET, url, null, this, this);
         queue.add(request);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Animatoo.animateSlideRight(MainActivity.this);
     }
 
     @Override
@@ -87,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements Response.ErrorLis
                     Log.d("Identificador", Integer.toString(products.get(position).getId()));
                     intent.putExtra("ID", Integer.toString(products.get(position).getId()));
                     startActivity(intent);
+
+                    Animatoo.animateCard(MainActivity.this);
                 }
             });
 
